@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ParaCasa - Carrito de compras</title>
+</head>
+<body>
+    <h1>Carrito de compras</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>fecha</th>
+                <th>Total</th>
+                <th>Estado</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="item : ${carrito.items}">
+                <td th:text="${item.plato.nombre}"></td>
+                <td th

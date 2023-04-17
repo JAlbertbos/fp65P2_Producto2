@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>ParaCasa - Pedidos de comida a domicilio</title>
+
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/5.2.3/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">PARA CASA</a>
+</nav>
+
+<main role="main" class="container">
+
+    <div class="starter-template">
+	   <h1>Bienvenido a ParaCasa</h1>
+	   <p>Realiza tus pedidos de comida favorita desde la comodidad de tu hogar.</p>
+    </div>
+
+    <ol class="list-group">
+   <!--      <li class="list-group-item" th:each="task : ${tasks}" th:text="${task}"></li> -->
+        <li class="list-group-item"><a th:href="@{/restaurante}">Ver restaurantes disponibles</a></li>
+        <li class="list-group-item"><a th:href="@{/pedido}">Ver carrito de compras</a></li>
+        <li class="list-group-item"><a th:href="@{/cliente}">ver clientes</a></li>
+    </ol>
+
+</main>
+
+
+<script type="text/javascript" th:src="@{webjars/bootstrap/5.2.3/js/bootstrap.min.js}"></script>
+</body>
+</html>

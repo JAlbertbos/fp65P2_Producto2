@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ParaCasa - Restaurantes disponibles</title>
+</head>
+<body>
+    <h1>Restaurantes disponibles</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Plato</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="plato : ${platos}">
+                <td th:text="${plato.restaurante}"></td>
+                <td th:text="${plato.nombre}"></td>
+                <td th:text="${plato.precio}"></td>
+                <td><input type="number" min="1" max="10" value="1" th:id="${'cantidad-' + plato.id}"></td>
+                <td><button type="button" th:onclick="'agregarAlCarrito(' + plato.id + ',' + 'cantidad-' + plato.id + ')'">Agregar al carrito</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <a th:href="@{/carrito}">Ver carrito de compras</a>
+</body>
+</html>
